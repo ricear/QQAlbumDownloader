@@ -129,7 +129,7 @@ class AlbumSpider(scrapy.Spider):
         for photo_info in photo_info_list['data']['photoList']:
             photo_url = photo_info['raw']  # 照片原图地址
             if photo_url == '':
-                photo_url = photo_info['pre']  # 压缩后的照片地址
+                photo_url = photo_info['url']  # 压缩后的照片地址
             start_urls.append(photo_url)
             photo_count += 1
         album_count += 1
