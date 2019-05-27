@@ -8,7 +8,7 @@ a、下载谷歌浏览器并安装，下载地址为：https://www.google.cn/chr
 
 b、查看谷歌浏览器版本信息
 
-![1](gif/1.gif)
+![1](gif/查看谷歌浏览器版本信息.gif)
 
 c、下载对应版本的 ```webdriver```，然后放到项目中的webdriver目录下，下载地址为：https://chromedriver.storage.googleapis.com/index.html
 
@@ -24,3 +24,4 @@ f、进入到项目根目录下的```QQAlbumDownloader```文件夹下，使用``
 
 g、运行效果
 
+![1](gif/QQ空间中的照片下载器使用示例.gif)
