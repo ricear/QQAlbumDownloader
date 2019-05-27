@@ -133,6 +133,7 @@ class AlbumSpider(scrapy.Spider):
             start_urls.append(photo_url)
             photo_count += 1
         album_count += 1
+        time.sleep(4)
     print('共下载 ' + (str)(album_count) + ' 个相册，' + (str)(photo_count) + ' 张照片')
 
     def parse(self, response):
