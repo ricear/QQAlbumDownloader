@@ -5,5 +5,5 @@ from scrapy.cmdline import execute
 
 if __name__ == '__main__':
 
-    sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-    execute(["scrapy", "crawl", "album"])
+    execute(["scrapy", "crawl", "album", "-a", "upload_server=true"])
+    # execute(["scrapy", "crawl", "album", "-a", "target=本科毕业聚会"])
