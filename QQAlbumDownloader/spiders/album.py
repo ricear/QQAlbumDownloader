@@ -54,9 +54,9 @@ path_main = ''
 
 # 输入qq号和密码
 # account = input('请输入你的qq号：')
-account = '1093579950'
+account = '******'
 # password = getpass.getpass('请输入你的密码：')
-password = 'WEipeng185261'
+password = '******'
 
 # 请求选择文件夹/目录
 # root = tkinter.Tk()  # 创建一个Tkinter.Tk()实例
