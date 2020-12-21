@@ -1,33 +1,12 @@
-import getpass
 import json
-import re
-import time  # 用来延时
-import tkinter
-import tkinter as tk
-import os
-import urllib
-
-import scrapy
-from selenium import webdriver
-from tkinter import filedialog
+from six.moves import urllib
 
 from QQAlbumDownloader.util.CommonUtils import *
+from QQAlbumDownloader.util.SlideVerfication import SlideVerificationCode
 
 ua_header = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'
     }
-
-# 获取 web 驱动
-def get_driver(type):
-    # PhantomJS
-    if type == 0:
-        driver = webdriver.PhantomJS(
-            executable_path='phantomjs/bin/phantomjs')
-            # executable_path='/usr/local/software/phantomjs-2.1.1-linux-x86_64/bin/phantomjs')
-    # Chrome
-    if type == 1:
-        driver = webdriver.Chrome('webdriver/chromedriver/chromedriver')
-    return driver
 
 # 解析一个页面的信息
 def parse_one_page(html, pattern):
@@ -42,10 +21,10 @@ def parse_one_page(html, pattern):
 # 计算 g_tk
 def calculate_g_tk(driver):
     time.sleep(6)
-    g_tk = driver.execute_script("return document.getElementsByTagName('script')[3].src")
-    if 'b.cnc.qzone.qq.com' not in g_tk:
-        g_tk = driver.execute_script("return document.getElementsByTagName('script')[2].src")
-    return g_tk.split('g_tk=')[1].split('&')[0]
+    # g_tk = driver.execute_script("return document.getElementsByTagName('script')[3].src")
+    # if 'b.cnc.qzone.qq.com' not in g_tk:
+    #     g_tk = driver.execute_script("return document.getElementsByTagName('script')[2].src")
+    return (str)(driver.execute_script('return QZONE.FP.getACSRFToken()'))
 
 
 def mkdir(path):
@@ -77,13 +56,16 @@ path_main = ''
 # account = input('请输入你的qq号：')
 account = '1093579950'
 # password = getpass.getpass('请输入你的密码：')
-password = 'weipeng185261'
+password = 'WEipeng185261'
 
 # 请求选择文件夹/目录
-root = tkinter.Tk()  # 创建一个Tkinter.Tk()实例
-root.withdraw()  # 将Tkinter.Tk()实例隐藏
-path = tkinter.filedialog.askdirectory(title=u'请选择照片保存位置', initialdir=(os.path.defpath))
-root.update()
+# root = tkinter.Tk()  # 创建一个Tkinter.Tk()实例
+# root.withdraw()  # 将Tkinter.Tk()实例隐藏
+# path = tkinter.filedialog.askdirectory(title=u'请选择照片保存位置', initialdir=(os.path.defpath))
+# root.update()
+# path = '/mnt/hgfs/Personal/Pictures'
+# path = 'D:/Pictures'
+path = '/Users/weipeng/Downloads'
 path = path + '/' + account
 path_main = path
 # 创建文件夹
@@ -97,15 +79,36 @@ class AlbumSpider(scrapy.Spider):
     driver = get_driver(1)
     driver.get("https://i.qq.com/")
 
-    # 登陆
+    # 登录
     driver.switch_to.frame('login_frame')  # 切换到登陆界面
-    # driver.find_element_by_id('switcher_plogin').click()  # 选择帐号密码登陆
-    # driver.find_element_by_name('u').clear()
-    # driver.find_element_by_name('u').send_keys(account)  # 此处输入你的QQ号
-    # driver.find_element_by_name('p').clear()
-    # driver.find_element_by_name('p').send_keys('weipeng185261')  # 此处输入你的QQ密码
-    # driver.find_element_by_id('login_button').click()  # 点击登陆按键
-    time.sleep(12)
+    driver.find_element_by_id('switcher_plogin').click()  # 选择帐号密码登陆
+    driver.find_element_by_name('u').clear()
+    driver.find_element_by_name('u').send_keys(account)  # 此处输入你的QQ号
+    driver.find_element_by_name('p').clear()
+    driver.find_element_by_name('p').send_keys(password)  # 此处输入你的QQ密码
+    driver.find_element_by_id('login_button').click()  # 点击登陆按键
+    time.sleep(21)
+
+    # 第三步：进行滑动验证
+    # 3.1定位验证码所在的iframe,并进行切换
+    v_frame = driver.find_element_by_id('tcaptcha_iframe')
+    driver.switch_to.frame(v_frame)
+    # 3.2获取验证码滑块图元素
+    sli_ele = driver.find_element_by_id('slideBlock')
+    # 3.3获取验证码背景图的元素
+    bg_ele = driver.find_element_by_id('slideBg')
+    # 3.4 识别滑块需要滑动的距离
+    # 3.4.1识别背景缺口位置
+    sv = SlideVerificationCode(save_image=True)
+    distance = sv.get_element_slide_distance(sli_ele, bg_ele)
+    # 3.4.2 根据页面的缩放比列调整滑动距离
+    dis = (distance * 280 / 680) - 30
+    # 3.5 获取滑块按钮
+    sli_btn = driver.find_element_by_id('tcaptcha_drag_thumb')
+
+    # 3.6拖动滑块进行验证
+    sv.slide_verification(driver, sli_btn, dis)
+    time.sleep(21)
 
     # 获取相册列表
     driver.find_element_by_id('menuContainer').find_element_by_xpath('./div/ul/li[3]/a').click()  # 点击相册按钮
@@ -173,6 +176,7 @@ class AlbumSpider(scrapy.Spider):
             else:
                 # 照片
                 photo_name = photo_id + '.jpeg'
+            photo_name = photo_name.replace("*", "")
             file_path = album_path + '/' + photo_name
             # 图片不存在时再下载
             dic = {'image_name': photo_name}
@@ -181,17 +185,17 @@ class AlbumSpider(scrapy.Spider):
             else:
                 if os.path.exists(file_path) == False:
                     print('正在下载' + (str)(self.album_count) + '/'+(str)(self.total_album_count)+' 个相册，' + (str)(current_photo_index) + '/'+(str)(current_photo_count)+' 张照片，共下载'+(str)(self.total_photo_count)+'张照片 ' ' -> ' + album_name + ' -> ' + photo_name)
-                    urllib.request.urlretrieve(photo_url, file_path)
+                    urllib.request.urlretrieve(photo_url, file_path.replace("*", ""))
                     if (self.upload_server is not None and self.upload_server == 'true'):
-                        upload_image_single(path_main, album_name, False)
+                        upload_image_single(path_main, album_name, False, photo_name=photo_name)
                     print(photo_name + ' -> 下载完成')
                 else:
                     print(photo_name + ' 已下载')
             self.photo_count += 1
             current_photo_index += 1
         self.album_count += 1
-        print(f'正在删除本地文件夹 %s' % (album_path))
-        try:
-            os.rmdir(album_path)
-        except:
-            pass
+        # print(f'正在删除本地文件夹 %s' % (album_path))
+        #try:
+            # os.rmdir(album_path)
+        #except:
+        #    pass
