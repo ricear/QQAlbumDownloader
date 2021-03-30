@@ -65,7 +65,7 @@ pyasn1-modules==0.2.8
 pycparser==2.20
 PyDispatcher==2.0.5
 pyee==8.1.0
-Pygments==2.7.2
+Pygments==2.7.4
 PyHamcrest==2.0.2
 pymongo==3.7.2
 pyOpenSSL==19.1.0
