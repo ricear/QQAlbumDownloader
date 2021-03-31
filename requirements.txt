@@ -7,7 +7,7 @@ elasticsearch==7.0.5
 requests==2.25.0
 opencv_python==4.0.0.21
 Scrapy==1.6.0
-lxml==4.3.2
+lxml==4.6.3
 pandas==0.24.2
 openpyxl==3.0.3
 tqdm==4.32.2
