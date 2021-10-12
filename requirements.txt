@@ -5,7 +5,7 @@ pymongo==3.7.2
 qrcode==6.1
 elasticsearch==7.0.5
 requests==2.25.0
-opencv_python==4.0.0.21
+opencv_python==4.2.0.32
 Scrapy==1.6.0
 lxml==4.3.2
 pandas==0.24.2
