@@ -6,7 +6,7 @@ qrcode==6.1
 elasticsearch==7.0.5
 requests==2.25.0
 opencv_python==4.0.0.21
-Scrapy==1.6.0
+Scrapy==2.6.2
 lxml==4.3.2
 pandas==0.24.2
 openpyxl==3.0.3
