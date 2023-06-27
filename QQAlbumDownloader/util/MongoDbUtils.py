@@ -2,8 +2,8 @@
 from pymongo import MongoClient
 
 settings = {
-    # "ip":'127.0.0.1',   #ip
-    "ip":'clusterserver1',   #ip
+    "ip":'127.0.0.1',   #ip
+    # "ip":'clusterserver1',   #ip
     # "ip":'81.70.152.205',   #ip
     "port":27017,           #端口
     # "port":10015,           #端口

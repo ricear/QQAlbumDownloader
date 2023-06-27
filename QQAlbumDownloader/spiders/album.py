@@ -89,26 +89,26 @@ class AlbumSpider(scrapy.Spider):
     driver.find_element_by_id('login_button').click()  # 点击登陆按键
     time.sleep(21)
 
-    # 第三步：进行滑动验证
-    # 3.1定位验证码所在的iframe,并进行切换
-    v_frame = driver.find_element_by_id('tcaptcha_iframe')
-    driver.switch_to.frame(v_frame)
-    # 3.2获取验证码滑块图元素
-    sli_ele = driver.find_element_by_id('slideBlock')
-    # 3.3获取验证码背景图的元素
-    bg_ele = driver.find_element_by_id('slideBg')
-    # 3.4 识别滑块需要滑动的距离
-    # 3.4.1识别背景缺口位置
-    sv = SlideVerificationCode(save_image=True)
-    distance = sv.get_element_slide_distance(sli_ele, bg_ele)
-    # 3.4.2 根据页面的缩放比列调整滑动距离
-    dis = (distance * 280 / 680) - 30
-    # 3.5 获取滑块按钮
-    sli_btn = driver.find_element_by_id('tcaptcha_drag_thumb')
-
-    # 3.6拖动滑块进行验证
-    sv.slide_verification(driver, sli_btn, dis)
-    time.sleep(21)
+    # # 第三步：进行滑动验证
+    # # 3.1定位验证码所在的iframe,并进行切换
+    # v_frame = driver.find_element_by_id('tcaptcha_iframe')
+    # driver.switch_to.frame(v_frame)
+    # # 3.2获取验证码滑块图元素
+    # sli_ele = driver.find_element_by_id('slideBlock')
+    # # 3.3获取验证码背景图的元素
+    # bg_ele = driver.find_element_by_id('slideBg')
+    # # 3.4 识别滑块需要滑动的距离
+    # # 3.4.1识别背景缺口位置
+    # sv = SlideVerificationCode(save_image=True)
+    # distance = sv.get_element_slide_distance(sli_ele, bg_ele)
+    # # 3.4.2 根据页面的缩放比列调整滑动距离
+    # dis = (distance * 280 / 680) - 30
+    # # 3.5 获取滑块按钮
+    # sli_btn = driver.find_element_by_id('tcaptcha_drag_thumb')
+    #
+    # # 3.6拖动滑块进行验证
+    # sv.slide_verification(driver, sli_btn, dis)
+    # time.sleep(21)
 
     # 获取相册列表
     driver.find_element_by_id('menuContainer').find_element_by_xpath('./div/ul/li[3]/a').click()  # 点击相册按钮
@@ -186,8 +186,8 @@ class AlbumSpider(scrapy.Spider):
                 if os.path.exists(file_path) == False:
                     print('正在下载' + (str)(self.album_count) + '/'+(str)(self.total_album_count)+' 个相册，' + (str)(current_photo_index) + '/'+(str)(current_photo_count)+' 张照片，共下载'+(str)(self.total_photo_count)+'张照片 ' ' -> ' + album_name + ' -> ' + photo_name)
                     urllib.request.urlretrieve(photo_url, file_path.replace("*", ""))
-                    if (self.upload_server is not None and self.upload_server == 'true'):
-                        upload_image_single(path_main, album_name, False, photo_name=photo_name)
+                    # if (self.upload_server is not None and self.upload_server == 'true'):
+                    #     upload_image_single(path_main, album_name, False, photo_name=photo_name)
                     print(photo_name + ' -> 下载完成')
                 else:
                     print(photo_name + ' 已下载')

@@ -1617,7 +1617,7 @@ def get_driver(type=0):
         options.add_experimental_option('excludeSwitches', ['enable-automation'])
         options.add_experimental_option("prefs", {
             # 设置默认下载路径
-            "download.default_directory": "/Users/weipeng/Personal/Projects/YoutubeVideoDownloader/YoutubeVideoDownloader/",
+            "download.default_directory": "/Users/weipeng/Downloads/",
             "download.prompt_for_download": True,
             "download.directory_upgrade": True,
             "safebrowsing.enabled": True,
@@ -1628,7 +1628,7 @@ def get_driver(type=0):
         })
         # 打开Chrome浏览器
         # driver = webdriver.Chrome(abspath + '/webdriver/chromedriver/chromedriver', chrome_options=options)
-        driver = webdriver.Chrome('/Users/weipeng/Personal/Projects/QQAlbumDownloader/QQAlbumDownloader/webdriver/chromedriver/chromedriver', chrome_options=options)
+        driver = webdriver.Chrome('/Users/weipeng/projects/study/QQAlbumDownloader-master/QQAlbumDownloader/webdriver/chromedriver/chromedriver', chrome_options=options)
     # 设置超时时间
     # driver.set_page_load_timeout(60)
     # driver.set_script_timeout(60)
