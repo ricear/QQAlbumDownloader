@@ -118,3 +118,7 @@ movie/
 /movie/
 
 documentations/
+
+.DS_Store
+.idea/
+.svn/
