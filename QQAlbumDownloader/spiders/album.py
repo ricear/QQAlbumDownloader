@@ -8,6 +8,8 @@ ua_header = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'
     }
 
+abspath = os.getcwd()
+
 # 解析一个页面的信息
 def parse_one_page(html, pattern):
     pattern = re.compile(pattern)
@@ -54,9 +56,9 @@ path_main = ''
 
 # 输入qq号和密码
 # account = input('请输入你的qq号：')
-account = '1093579950'
+account = '******'
 # password = getpass.getpass('请输入你的密码：')
-password = 'WEipeng185261'
+password = '******'
 
 # 请求选择文件夹/目录
 # root = tkinter.Tk()  # 创建一个Tkinter.Tk()实例
@@ -65,8 +67,8 @@ password = 'WEipeng185261'
 # root.update()
 # path = '/mnt/hgfs/Personal/Pictures'
 # path = 'D:/Pictures'
-path = '/Users/weipeng/Downloads'
-path = path + '/' + account
+path = os.path.dirname(abspath)
+path = path + '/downloads/' + account
 path_main = path
 # 创建文件夹
 mkdir(path)
@@ -87,7 +89,7 @@ class AlbumSpider(scrapy.Spider):
     driver.find_element_by_name('p').clear()
     driver.find_element_by_name('p').send_keys(password)  # 此处输入你的QQ密码
     driver.find_element_by_id('login_button').click()  # 点击登陆按键
-    time.sleep(21)
+    time.sleep(36)
 
     # # 第三步：进行滑动验证
     # # 3.1定位验证码所在的iframe,并进行切换
@@ -114,6 +116,7 @@ class AlbumSpider(scrapy.Spider):
     driver.find_element_by_id('menuContainer').find_element_by_xpath('./div/ul/li[3]/a').click()  # 点击相册按钮
     g_tk = calculate_g_tk(driver)
     url = 'https://h5.qzone.qq.com/proxy/domain/photo.qzone.qq.com/fcgi-bin/fcg_list_album_v3?g_tk=' + g_tk + '&callback=shine5_Callback&t=922052151&hostUin=' + account + '&uin=' + account + '&appid=4&inCharset=utf-8&outCharset=utf-8&source=qzone&plat=qzone&format=jsonp&notice=0&filter=1&handset=4&pageNumModeSort=40&pageNumModeClass=15&needUserInfo=1&idcNum=4&mode=2&sortOrder=1&pageStart=0&pageNum=999999&callbackFun=shine5'
+    driver.get(url)
     driver.get(url)
     album_info_list = json.loads(
         driver.execute_script("return document.getElementsByTagName('pre')[0].textContent.split('(')[1].split(')')[0]"))

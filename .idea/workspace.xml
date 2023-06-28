@@ -1,14 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8aa22210-70ff-474b-b30d-2376a2634269" name="Default Changelist" comment="" />
+    <list default="true" id="8aa22210-70ff-474b-b30d-2376a2634269" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/QQAlbumDownloader.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QQAlbumDownloader.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/Test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/WechatIMG8.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/background01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/download_albums.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/download_all_albums.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/items.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/middlewares.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/new_image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/nohup-album.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/ChangeLog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/LICENSE.BSD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/bin/phantomjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/arguments.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/child_process-examples.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/colorwheel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/countdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/detectsniff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/echoToFile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/features.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/fibo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/hello.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/injectme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/loadspeed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/loadurlwithoutcss.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/modernizr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/netlog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/netsniff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/openurlwithproxy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/outputEncoding.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/page_events.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/pagecallback.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/phantomwebintro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/post.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/postjson.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/postserver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/printenv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/printheaderfooter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/printmargins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/rasterize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/render_multi_url.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/responsive-screenshot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/run-jasmine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/run-jasmine2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/run-qunit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/scandir.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/serverkeepalive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/simpleserver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/sleepsort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/stdin-stdout-stderr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/universe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/unrandomize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/useragent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/version.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/waitfor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/examples/walk_through_frames.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/phantomjs/third-party.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/pipelines.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/s2.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/slider.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/slider01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/spiders/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/spiders/album.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/test2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/test4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/test5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/upload_image_list.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/upload_image_single.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/util/CommonUtils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/util/Configs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/util/ExcelUtil.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/util/MongoDbUtils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/util/SlideVerfication.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/util/TypeUtils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/util/WaterMarkUtils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/util/YDMHTTPDemo3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/util/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/webdriver/chromedriver/chromedriver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/webdriver/chromedriver/chromedriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/webdriver/chromedriver/chromedriver_linux" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/webdriver/chromedriver/chromedriver_mac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/webdriver/chromedriver/chromedriver_windows.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QQAlbumDownloader/webdriver/chromedriver/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -60,10 +172,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/QQAlbumDownloader/util" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/QQAlbumDownloader/util" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/QQAlbumDownloader/test" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -115,7 +235,9 @@
       <workItem from="1685364461180" duration="3139000" />
       <workItem from="1685605197115" duration="23000" />
       <workItem from="1687836024380" duration="57000" />
-      <workItem from="1687836126020" duration="320000" />
+      <workItem from="1687836126020" duration="4892000" />
+      <workItem from="1687920119947" duration="3560000" />
+      <workItem from="1687945660829" duration="67000" />
     </task>
     <servers />
   </component>
@@ -153,6 +275,18 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/QQAlbumDownloader_master$main.coverage" NAME="main Coverage Results" MODIFIED="1685367412707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/QQAlbumDownloader" />

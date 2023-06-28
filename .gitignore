@@ -122,3 +122,8 @@ documentations/
 .DS_Store
 .idea/
 .svn/
+
+QQAlbumDownloader/test/
+QQAlbumDownloader/util/CommonUtils_v2.py
+
+videos/
