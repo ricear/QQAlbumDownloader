@@ -22,6 +22,7 @@
     <a href="https://twitter.com/ricear1996"><img
             src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fricear1996" /></a>
 </p>
+
 ## 简介
 
 QQAlbumDownloader 主要用于下载 QQ 相册中的照片（原图）视频。作为一个 QQ 相册的重度用户，已累计上传近 9000 张照片，这些照片承载了我从幼年到成年的所有记忆，重要性不言而喻。即使现在微信朋友圈几乎普及到了每个国人，我依然热衷于将照片分类存放到 QQ 相册中。然而随着 QQ 空间更新逐渐放缓，一种担忧也油然而生：假如有一天 QQ 空间停止运行了怎么办？由于 QQ 相册并不提供批量下载，有朝一日 QQ 空间真的停止运行，所有存到 QQ 相册中的照片可能都会丢失，这对于我来说可能是灾难性的。因此，QQAlbumDownloader 就诞生了。
@@ -83,7 +84,7 @@ QQAlbumDownloader 支持单个相册或全部相册下载。致力于用作 QQ �
 
 3. 运行 `QQAlbumDownloader/main.py` 文件。
 
-   ![QQAlbumDownloader快速入手](https://notebook.ricear.com/media/202306/2023-06-28_173952_1140180.03740891710405325.gif)
+![QQAlbumDownloader快速入手](https://notebook.ricear.com/media/202306/2023-06-28_173952_1140180.03740891710405325.gif)
 
 ## 常见问题
 
