@@ -465,5 +465,5 @@ AttributeError: module 'OpenSSL.SSL' has no attribute 'SSLv3_METHOD'
 
 ## 互动与反馈
 
-如果您在使用过程中有任何问题，或者有好的建议，欢迎[提交 issue](https://github.com/ricear/QQAlbumDownloader/issues/new)或者通过[i@ricear.com](mailto:i@ricear.com)与取得联系，感谢您的支持与帮助。
+如果您在使用过程中有任何问题，或者有好的建议，欢迎[提交 issue](https://github.com/ricear/QQAlbumDownloader/issues/new)或者通过[i@ricear.com](mailto:i@ricear.com)与我取得联系，感谢您的支持与帮助。
 
