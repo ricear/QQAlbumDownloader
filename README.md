@@ -84,7 +84,7 @@ QQAlbumDownloader 支持单个相册或全部相册下载。致力于用作 QQ �
 
 3. 运行 `QQAlbumDownloader/main.py` 文件。
 
-   ![QQAlbumDownloader快速入手](https://notebook.ricear.com/media/202306/2023-06-28_175858_2571600.7191231571404029.gif)
+   ![QQAlbumDownloader快速入手](https://github.com/ricear/QQAlbumDownloader/blob/master/gif/QQAlbumDownloader%E5%BF%AB%E9%80%9F%E5%85%A5%E6%89%8B.gif?raw=true)
 
 ## 常见问题
 
